@@ -1,52 +1,52 @@
-# ?? Krypta
+﻿# 🔐 Krypta
 
 > **The ultimate minimalist cryptographic suite.**
-> *La suite criptogr�fica minimalista definitiva.*
+> *La suite criptográfica minimalista definitiva.*
 
-[English](#english) | [Espa�ol](#espa�ol)
+[English](#english) | [Español](#español)
 
 ---
 
 <a name="english"></a>
-## ?? English
+## 🌍 English
 
-Developed with ?? by **DaKaR**.
+Developed with ❤️ by **DaKaR**.
 
 **Krypta** is a professional-grade cryptographic suite designed for secure file encryption and decryption. Built on the robust **Fernet (AES-128)** implementation, it provides a reliable and elegant solution for protecting your sensitive data.
 
-### ? Features
-- **??? Unbreakable Security**: Utilizes symmetric encryption via the industry-standard Fernet.
-- **?? Ready to Run**: Includes pre-compiled .exe binaries for instant use on Windows.
-- **?? Python Powered**: Built with clean, efficient, and modern Python 3.14 code.
-- **?? Minimalist UI**: Focused entirely on core security and ease of use.
+### ✨ Features
+- **🛡️ Unbreakable Security**: Utilizes symmetric encryption via the industry-standard Fernet.
+- **🚀 Ready to Run**: Includes pre-compiled .exe binaries for instant use on Windows.
+- **🐍 Python Powered**: Built with clean, efficient, and modern Python 3.14 code.
+- **🎨 Minimalist UI**: Focused entirely on core security and ease of use.
 
-### ??? Usage
+### 🛠️ Usage
 1. Open the dist/ folder.
 2. Run Encryptor.exe to secure your files.
 3. Run Decryptor.exe to unlock them using your key.
 
 ---
 
-<a name="espa�ol"></a>
-## ?? Espa�ol
+<a name="español"></a>
+## 🌎 Español
 
-Desarrollado con ?? por **DaKaR**.
+Desarrollado con ❤️ por **DaKaR**.
 
-**Krypta** es una suite criptogr�fica de nivel profesional dise�ada para el cifrado y descifrado seguro de archivos. Basada en la robusta implementaci�n **Fernet (AES-128)**, ofrece una soluci�n confiable y elegante para proteger tus datos m�s valiosos.
+**Krypta** es una suite criptográfica de nivel profesional diseñada para el cifrado y descifrado seguro de archivos. Basada en la robusta implementación **Fernet (AES-128)**, ofrece una solución confiable y elegante para proteger tus datos más valiosos.
 
-### ? Caracter�sticas
-- **??? Seguridad Inquebrantable**: Cifrado sim�trico basado en el est�ndar industrial Fernet.
-- **?? Listo para Usar**: Incluye binarios .exe pre-compilados para uso inmediato en Windows.
-- **?? Potenciado por Python**: C�digo limpio, eficiente y moderno escrito en Python 3.14.
-- **?? Dise�o Minimalista**: Enfocado totalmente en la seguridad y la facilidad de uso.
+### ✨ Características
+- **🛡️ Seguridad Inquebrantable**: Cifrado simétrico basado en el estándar industrial Fernet.
+- **🚀 Listo para Usar**: Incluye binarios .exe pre-compilados para uso inmediato en Windows.
+- **🐍 Potenciado por Python**: Código limpio, eficiente y moderno escrito en Python 3.14.
+- **🎨 Diseño Minimalista**: Enfocado totalmente en la seguridad y la facilidad de uso.
 
-### ??? Uso
+### 🛠️ Uso
 1. Abre la carpeta dist/.
 2. Ejecuta Encryptor.exe para proteger tus archivos.
 3. Ejecuta Decryptor.exe para desbloquearlos con tu clave.
 
 ---
 
-## ?? License / Licencia
+## 📄 License / Licencia
 **Private & Proprietary** | *Privado y Propietario*
 Developed by DaKaR.
