@@ -20,7 +20,10 @@ Developed with ❤️ by **DaKaR**.
 - **🐍 Python Powered**: Built with clean, efficient, and modern Python 3.14 code.
 - **🎨 Minimalist UI**: Focused entirely on core security and ease of use.
 
-### 🛠️ Usage
+### 🛠️ Quick Start
+1. Download the latest **Release** from the sidebar.
+2. Run setup.ps1 to ensure all dependencies are ready.
+3. Run Encryptor.exe or Decryptor.exe directly.
 1. Open the dist/ folder.
 2. Run Encryptor.exe to secure your files.
 3. Run Decryptor.exe to unlock them using your key.
@@ -40,7 +43,10 @@ Desarrollado con ❤️ por **DaKaR**.
 - **🐍 Potenciado por Python**: Código limpio, eficiente y moderno escrito en Python 3.14.
 - **🎨 Diseño Minimalista**: Enfocado totalmente en la seguridad y la facilidad de uso.
 
-### 🛠️ Uso
+### 🛠️ Inicio Rápido
+1. Descarga el último **Release** desde la barra lateral.
+2. Ejecuta setup.ps1 para asegurar que todas las dependencias estén listas.
+3. Ejecuta Encryptor.exe o Decryptor.exe directamente.
 1. Abre la carpeta dist/.
 2. Ejecuta Encryptor.exe para proteger tus archivos.
 3. Ejecuta Decryptor.exe para desbloquearlos con tu clave.
@@ -50,3 +56,4 @@ Desarrollado con ❤️ por **DaKaR**.
 ## 📄 License / Licencia
 **Private & Proprietary** | *Privado y Propietario*
 Developed by DaKaR.
+
