@@ -1,4 +1,4 @@
-import os
+﻿import os
 import base64
 import getpass
 from cryptography.fernet import Fernet, InvalidToken
@@ -6,9 +6,11 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import hashes
 
 # Enable ANSI escape codes on Windows
+# Habilitar códigos de escape ANSI en Windows
 os.system('')
 
 # ── ANSI Color Palette ────────────────────────────────────────────────────────
+# ── Paleta de Colores ANSI ────────────────────────────────────────────────────
 class C:
     RED    = '\033[91m'
     GREEN  = '\033[92m'
@@ -20,6 +22,7 @@ class C:
     RESET  = '\033[0m'
 
 # ── Constants ─────────────────────────────────────────────────────────────────
+# ── Constantes ────────────────────────────────────────────────────────────────
 SALT_SIZE         = 16
 PBKDF2_ITERATIONS = 480_000
 VERSION           = "1.0"
@@ -27,14 +30,15 @@ AUTHOR            = "DaKaR"
 LINE              = '─' * 60
 
 # ── UI Helpers ────────────────────────────────────────────────────────────────
+# ── Ayudantes de Interfaz de Usuario ──────────────────────────────────────────
 def banner():
     print(f"\n{C.GREEN}{C.BOLD}")
-    print("  ╔════════════════════════════════════════════════════════════╗")
+    print("  ╔══════════════════════════════════════════════════════════╗")
     print("  ║          CRYPTVAULT  //  FILE DECRYPTION ENGINE           ║")
     print(f"  ║    Algorithm : AES-128-CBC   KDF : PBKDF2-SHA256  v{VERSION}   ║")
-    print("  ╠════════════════════════════════════════════════════════════╣")
-    print(f"  ║    Developed by {C.YELLOW}{AUTHOR}{C.GREEN}                                      ║")
-    print("  ╚════════════════════════════════════════════════════════════╝")
+    print("  ╠══════════════════════════════════════════════════════════╣")
+    print(f"  ║    Developed by {C.YELLOW}{AUTHOR}{C.GREEN}                                      ║")        
+    print("  ╚══════════════════════════════════════════════════════════╝")
     print(C.RESET)
 
 def info(msg):       print(f"  {C.CYAN}[*]{C.RESET}  {msg}")
@@ -49,8 +53,12 @@ def prompt(label: str) -> str:
     return raw.strip('"').strip("'")
 
 # ── Core ──────────────────────────────────────────────────────────────────────
+# ── Núcleo ────────────────────────────────────────────────────────────────────
 def derive_key(password: str, salt: bytes) -> bytes:
-    """Derive a 32-byte Fernet-compatible key via PBKDF2-SHA256."""
+    """
+    Derive a 32-byte Fernet-compatible key via PBKDF2-SHA256.
+    Deriva una clave de 32 bytes compatible con Fernet mediante PBKDF2-SHA256.
+    """
     kdf = PBKDF2HMAC(
         algorithm=hashes.SHA256(),
         length=32,
@@ -73,6 +81,7 @@ def decrypt_file(file_path: str, key_file_path: str) -> bool:
     file_size = os.path.getsize(file_path)
 
     # Read key file: [16-byte salt][encrypted session key]
+    # Leer archivo de clave: [sal de 16 bytes][clave de sesión cifrada]
     with open(key_file_path, 'rb') as f:
         key_data = f.read()
 
@@ -84,6 +93,7 @@ def decrypt_file(file_path: str, key_file_path: str) -> bool:
     locked_key = key_data[SALT_SIZE:]
 
     # Determine the restored output path (strip .locked suffix)
+    # Determinar la ruta de salida restaurada (eliminar el sufijo .locked)
     if file_path.endswith('.locked'):
         restored_path = file_path[:-7]
     else:
@@ -99,6 +109,7 @@ def decrypt_file(file_path: str, key_file_path: str) -> bool:
     sep()
 
     # Password prompt
+    # Solicitud de contraseña
     print()
     try:
         password = getpass.getpass(f"  {C.YELLOW}[?]{C.RESET}  Enter decryption password : ")
@@ -113,6 +124,7 @@ def decrypt_file(file_path: str, key_file_path: str) -> bool:
     derived_key = derive_key(password, salt)
 
     # Attempt to unlock the session key
+    # Intentar desbloquear la clave de sesión
     try:
         key_cipher  = Fernet(derived_key)
         session_key = key_cipher.decrypt(locked_key)
@@ -123,6 +135,7 @@ def decrypt_file(file_path: str, key_file_path: str) -> bool:
     info("Session key recovered. Decrypting target file ...")
 
     # Decrypt the file
+    # Descifrar el archivo
     try:
         cipher = Fernet(session_key)
 
@@ -135,10 +148,12 @@ def decrypt_file(file_path: str, key_file_path: str) -> bool:
         return False
 
     # Write the restored file (without .locked suffix)
+    # Escribir el archivo restaurado (sin el sufijo .locked)
     with open(restored_path, 'wb') as f:
         f.write(plaintext)
 
     # Remove the .locked file and the .key file
+    # Eliminar el archivo .locked y el archivo .key
     removed = []
     for path in (file_path, key_file_path):
         try:
@@ -163,8 +178,14 @@ def main():
 
     print(f"  {C.GRAY}Drag the encrypted (.locked) file onto this window and press Enter,")
     print(f"  or type the full file path manually.{C.RESET}\n")
+    
+    # Spanish instruction
+    # Instrucción en español
+    print(f"  {C.GRAY}Arrastra el archivo cifrado (.locked) a esta ventana y presiona Enter,")
+    print(f"  o escribe la ruta completa del archivo manualmente.{C.RESET}\n")
 
     # Get encrypted file path
+    # Obtener la ruta del archivo cifrado
     try:
         file_path = prompt(f"  {C.CYAN}[>]{C.RESET}  Encrypted file path (.locked) : ")
     except (KeyboardInterrupt, EOFError):
@@ -181,12 +202,13 @@ def main():
     print()
 
     # Auto-detect the .key file (same base name, .key extension)
+    # Auto-detectar el archivo .key (mismo nombre base, extensión .key)
     auto_key = file_path[:-7] + '.key' if file_path.endswith('.locked') else file_path + '.key'
 
     if os.path.isfile(auto_key):
         info(f"Key file detected: {os.path.basename(auto_key)}")
         try:
-            choice = input(f"  {C.CYAN}[>]{C.RESET}  Use this key file? [Y/n]        : ").strip().lower()
+            choice = input(f"  {C.CYAN}[>]{C.RESET}  Use this key file? [Y/n]        : ").strip().lower()       
         except (KeyboardInterrupt, EOFError):
             print()
             warning("Operation aborted.")
