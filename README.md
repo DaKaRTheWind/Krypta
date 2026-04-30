@@ -1,4 +1,4 @@
-﻿# 🔐 Krypta
+# 🔐 Krypta
 
 > **The ultimate minimalist cryptographic suite.**
 > *La suite criptográfica minimalista definitiva.*
@@ -10,7 +10,7 @@
 <a name="english"></a>
 ## 🌍 English
 
-Developed with ❤️ by **DaKaR**.
+Developed by **DaKaR**.
 
 **Krypta** is a professional-grade cryptographic suite designed for secure file encryption and decryption. Built on the robust **Fernet (AES-128)** implementation, it provides a reliable and elegant solution for protecting your sensitive data.
 
@@ -35,7 +35,7 @@ If you prefer running from source:
 <a name="español"></a>
 ## 🌎 Español
 
-Desarrollado con ❤️ por **DaKaR**.
+Desarrollado por **DaKaR**.
 
 **Krypta** es una suite criptográfica de nivel profesional diseñada para el cifrado y descifrado seguro de archivos. Basada en la robusta implementación **Fernet (AES-128)**, ofrece una solución confiable y elegante para proteger tus datos más valiosos.
 
