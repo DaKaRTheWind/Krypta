@@ -21,12 +21,14 @@ Developed with ❤️ by **DaKaR**.
 - **🎨 Minimalist UI**: Focused entirely on core security and ease of use.
 
 ### 🛠️ Quick Start
-1. Download the latest **Release** from the sidebar.
-2. Run setup.ps1 to ensure all dependencies are ready.
-3. Run Encryptor.exe or Decryptor.exe directly.
-1. Open the dist/ folder.
-2. Run Encryptor.exe to secure your files.
-3. Run Decryptor.exe to unlock them using your key.
+1. **Download**: Get the latest version from the **[Releases](https://github.com/DaKaRTheWind/Krypta/releases)** section.
+2. **Setup**: Run setup.ps1 (Right-click -> Run with PowerShell) to install dependencies.
+3. **Run**: Use Encryptor.exe to secure files or Decryptor.exe to unlock them.
+
+### 💻 For Developers
+If you prefer running from source:
+- Install dependencies: pip install cryptography
+- Run: python Encryptor.py
 
 ---
 
@@ -44,16 +46,17 @@ Desarrollado con ❤️ por **DaKaR**.
 - **🎨 Diseño Minimalista**: Enfocado totalmente en la seguridad y la facilidad de uso.
 
 ### 🛠️ Inicio Rápido
-1. Descarga el último **Release** desde la barra lateral.
-2. Ejecuta setup.ps1 para asegurar que todas las dependencias estén listas.
-3. Ejecuta Encryptor.exe o Decryptor.exe directamente.
-1. Abre la carpeta dist/.
-2. Ejecuta Encryptor.exe para proteger tus archivos.
-3. Ejecuta Decryptor.exe para desbloquearlos con tu clave.
+1. **Descarga**: Obtén la última versión desde la sección de **[Releases](https://github.com/DaKaRTheWind/Krypta/releases)**.
+2. **Configuración**: Ejecuta setup.ps1 (Clic derecho -> Ejecutar con PowerShell) para preparar el entorno.
+3. **Ejecución**: Usa Encryptor.exe para proteger tus archivos o Decryptor.exe para desbloquearlos.
+
+### 💻 Para Desarrolladores
+Si prefieres ejecutarlo desde el código fuente:
+- Instala las dependencias: pip install cryptography
+- Ejecuta: python Encryptor.py
 
 ---
 
 ## 📄 License / Licencia
 **Private & Proprietary** | *Privado y Propietario*
 Developed by DaKaR.
-
